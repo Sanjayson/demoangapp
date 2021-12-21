@@ -1,3 +1,3 @@
-FROM nginxinc/nginx-unprivileged 
+FROM nginx:1.17.1-alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY /dist/demoangapp /usr/share/nginx/html
