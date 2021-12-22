@@ -13,7 +13,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY  /dist/demoangapp/ /usr/share/nginx/html
 RUN chgrp -R 0 /var/cache/ /var/log/ /var/run/ && \
     chmod -R g=u /var/cache/ /var/log/ /var/run/
-EXPOSE 9090
+EXPOSE 8080
 #Entry point of application
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 

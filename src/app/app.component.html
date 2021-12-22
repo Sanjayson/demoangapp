@@ -327,6 +327,28 @@
 
 <div class="content" role="main">
 
+  <div id="container" class="card-container">
+    <table class="table" >  
+      <tr ngclass="btn-primary">  
+        <th class="tbl2">Date</th>  
+        <th class="tbl2">TemperatureC</th>  
+        <th class="tbl2">TemperatureF</th>  
+        <th class="tbl2">Summary</th>  
+      
+      </tr>  
+      <tr *ngFor="let employee of weatherForecastlist | async">  
+        <td class="tbl2">{{employee.date | date}}</td>  
+        <td class="tbl2">{{employee.temperatureC }}</td>  
+        <td class="tbl2">{{employee.temperatureF}}</td>   
+        <td class="tbl2">{{employee.summary}}</td>  
+       
+      </tr>  
+  
+    </table>  
+  </div>
+  <br/>
+  <br/>
+
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
 
@@ -341,7 +363,13 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span>{{ title }} app is running!
+
+      
+    </span>
+    <br/>
+    <br/>
+
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
