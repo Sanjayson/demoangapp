@@ -6,7 +6,7 @@ import { Weather } from './weather';
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl = "https://demo-2121-git-sanjay-bhade2008-dev.apps.sandbox.x8i5.p1.openshiftapps.com";  
+  readonly APIUrl = "http://demo-24-git-demoapp.apps.cicd.arcus.soprasteria.com";  
   constructor(private http: HttpClient) { }
   getWeatherForecastList(): Observable < any[] > {  
     return this.http.get < any[] > (this.APIUrl + '/Weatherforecast');  
